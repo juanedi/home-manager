@@ -34,8 +34,16 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.autojump
+    pkgs.cloc
+    pkgs.imagemagick
+    pkgs.nixfmt
     pkgs.pandoc
     pkgs.texlive.combined.scheme-full
+    pkgs.tree
+    pkgs.watch
+    pkgs.watchexec
+    pkgs.wget
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
