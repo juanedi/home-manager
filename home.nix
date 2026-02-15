@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -132,6 +132,20 @@
       ".python-version"
       ".dir-locals.el"
     ];
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      add_newline = false;
+      format = lib.concatStrings [
+        "$directory"
+        "$git_branch"
+        "$git_state"
+        "$character"
+      ];
+    };
   };
 
   programs.zsh = {
