@@ -73,4 +73,13 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Set up nix-direnv
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    # these only work for hm managed shells. we're not there yet!
+    # enableZshIntegration = true;
+    # enableBashIntegration = true;
+  };
 }
