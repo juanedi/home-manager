@@ -140,11 +140,16 @@
     settings = {
       add_newline = false;
       format = lib.concatStrings [
+        "$hostname"
         "$directory"
         "$git_branch"
         "$git_state"
         "$character"
       ];
+      hostname = {
+        ssh_only = true;
+        format = "[@$hostname](bold blue) ";
+      };
     };
   };
 
@@ -154,7 +159,6 @@
     shellAliases = {
       hm    = "home-manager";
       hgrep = "history | grep -i";
-      be    = "bundle exec";
       trim  = "sed \"s/^ *//g;s/ *$//g\"";
       eps   = "ps aux | grep -i";
       # lstcp = "lsof -i -n -P | grep TCP | grep LISTEN";
