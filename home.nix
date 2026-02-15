@@ -34,7 +34,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.autojump
     pkgs.cloc
     pkgs.imagemagick
     pkgs.nixfmt
@@ -85,6 +84,10 @@
   programs.home-manager.enable = true;
 
   # Set up nix-direnv
+  programs.autojump = {
+    enable = true;
+  };
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
@@ -92,22 +95,32 @@
     # enableZshIntegration = true;
     # enableBashIntegration = true;
   };
+
   programs.git = {
     enable = true;
 
     lfs.enable = true;
 
-    aliases = {
-      co = "checkout";
-      st = "status";
-      ci = "commit";
-      br = "branch";
-      f = "fetch";
-      cp = "cherry-pick";
-      diffs = "diff --staged";
-      logr = "log --reverse";
-      l1 = "log -1 -p";
-      t = "mktex";
+    settings = {
+      user = {
+        name = "Juan Edi";
+        email = "jedi11235@gmail.com";
+      };
+
+      github.user = "juanedi";
+
+      aliases = {
+        co = "checkout";
+        st = "status";
+        ci = "commit";
+        br = "branch";
+        f = "fetch";
+        cp = "cherry-pick";
+        diffs = "diff --staged";
+        logr = "log --reverse";
+        l1 = "log -1 -p";
+        t = "mktex";
+      };
     };
 
     ignores = [
@@ -119,9 +132,41 @@
       ".python-version"
       ".dir-locals.el"
     ];
+  };
 
-    extraConfig = {
-      github.user = "juanedi";
+  programs.zsh = {
+    enable = true;
+
+    shellAliases = {
+      hm    = "home-manager";
+      hgrep = "history | grep -i";
+      be    = "bundle exec";
+      trim  = "sed \"s/^ *//g;s/ *$//g\"";
+      eps   = "ps aux | grep -i";
+      # lstcp = "lsof -i -n -P | grep TCP | grep LISTEN";
+      gst   = "git status";
+      # doom  = "~/.config/emacs/bin/doom";
     };
+
+    oh-my-zsh = {
+      enable = true;
+      # theme = "be_nice";
+      # custom = "$HOME/.oh-my-zsh-custom";
+    };
+
+    sessionVariables = {
+      DIRENV_LOG_FORMAT = "";
+      DOOMDIR = "$HOME/.config/doom";
+    };
+
+    # initExtraFirst = builtins.concatStringsSep "\n" [
+    #  # uncomment if using a single-user nix installation
+    #  # ". ~/.nix-profile/etc/profile.d/nix.sh"
+    #  (builtins.readFile ./zsh/tmux-integration.zsh)
+    #  (builtins.readFile ./zsh/zellij-integration.zsh)
+    #  (builtins.readFile ./zsh/pdflatex-helpers.zsh)
+    # ];
+
+    initContent = builtins.readFile ./zsh/init-extra.zsh;
   };
 }
