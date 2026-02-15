@@ -86,14 +86,14 @@
   # Set up nix-direnv
   programs.autojump = {
     enable = true;
+    enableZshIntegration = true;
   };
 
   programs.direnv = {
     enable = true;
+    silent = true;
     nix-direnv.enable = true;
-    # these only work for hm managed shells. we're not there yet!
-    # enableZshIntegration = true;
-    # enableBashIntegration = true;
+    enableZshIntegration = true;
   };
 
   programs.git = {
@@ -169,7 +169,6 @@
     };
 
     sessionVariables = {
-      DIRENV_LOG_FORMAT = "";
       DOOMDIR = "$HOME/.config/doom";
     };
 
