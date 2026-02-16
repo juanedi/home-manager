@@ -24,7 +24,6 @@
         diffs = "diff --staged";
         logr = "log --reverse";
         l1 = "log -1 -p";
-        t = "mktex";
       };
     };
 
