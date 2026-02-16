@@ -34,7 +34,9 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.cachix
     pkgs.cloc
+    pkgs.devenv
     pkgs.imagemagick
     pkgs.nixfmt
     pkgs.pandoc
