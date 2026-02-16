@@ -1,6 +1,14 @@
-{ lib, config, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
+  imports = [
+    ./programs/autojump.nix
+    ./programs/direnv.nix
+    ./programs/git.nix
+    ./programs/starship.nix
+    ./programs/zsh.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jedi";
@@ -84,108 +92,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # Set up nix-direnv
-  programs.autojump = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    silent = true;
-    nix-direnv.enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.git = {
-    enable = true;
-
-    lfs.enable = true;
-
-    settings = {
-      user = {
-        name = "Juan Edi";
-        email = "jedi11235@gmail.com";
-      };
-
-      github.user = "juanedi";
-
-      aliases = {
-        co = "checkout";
-        st = "status";
-        ci = "commit";
-        br = "branch";
-        f = "fetch";
-        cp = "cherry-pick";
-        diffs = "diff --staged";
-        logr = "log --reverse";
-        l1 = "log -1 -p";
-        t = "mktex";
-      };
-    };
-
-    ignores = [
-      "**.swp"
-      "**.ignore"
-      "**.ignore.*"
-      ".envrc"
-      ".direnv"
-      ".python-version"
-      ".dir-locals.el"
-    ];
-  };
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      add_newline = false;
-      format = lib.concatStrings [
-        "$hostname"
-        "$directory"
-        "$git_branch"
-        "$git_state"
-        "$character"
-      ];
-      hostname = {
-        ssh_only = true;
-        format = "[@$hostname](bold blue) ";
-      };
-    };
-  };
-
-  programs.zsh = {
-    enable = true;
-
-    shellAliases = {
-      hm    = "home-manager";
-      hgrep = "history | grep -i";
-      trim  = "sed \"s/^ *//g;s/ *$//g\"";
-      eps   = "ps aux | grep -i";
-      # lstcp = "lsof -i -n -P | grep TCP | grep LISTEN";
-      gst   = "git status";
-      # doom  = "~/.config/emacs/bin/doom";
-    };
-
-    oh-my-zsh = {
-      enable = true;
-      # theme = "be_nice";
-      # custom = "$HOME/.oh-my-zsh-custom";
-    };
-
-    sessionVariables = {
-      DOOMDIR = "$HOME/.config/doom";
-    };
-
-    # initExtraFirst = builtins.concatStringsSep "\n" [
-    #  # uncomment if using a single-user nix installation
-    #  # ". ~/.nix-profile/etc/profile.d/nix.sh"
-    #  (builtins.readFile ./zsh/tmux-integration.zsh)
-    #  (builtins.readFile ./zsh/zellij-integration.zsh)
-    #  (builtins.readFile ./zsh/pdflatex-helpers.zsh)
-    # ];
-
-    initContent = builtins.readFile ./zsh/init-extra.zsh;
-  };
 }
