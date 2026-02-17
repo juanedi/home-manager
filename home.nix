@@ -6,6 +6,7 @@
     ./programs/direnv.nix
     ./programs/git.nix
     ./programs/starship.nix
+    ./programs/dropbox.nix
     ./programs/zsh.nix
   ];
 
