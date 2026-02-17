@@ -8,7 +8,13 @@
       PATH="${pkgs.gzip}/bin:$PATH" ${pkgs.gnutar}/bin/tar xzf "$tmpfile" -C "${config.home.homeDirectory}"
       rm -f "$tmpfile"
     fi
+
+    mkdir -p "${config.home.homeDirectory}/.dropbox-bin"
+    ${pkgs.wget}/bin/wget -O "${config.home.homeDirectory}/.dropbox-bin/dropbox" "https://www.dropbox.com/download?dl=packages/dropbox.py"
+    chmod +x "${config.home.homeDirectory}/.dropbox-bin/dropbox"
   '';
+
+  home.sessionPath = [ "${config.home.homeDirectory}/.dropbox-bin" ];
 
   systemd.user.services.dropbox = {
     Unit = {
