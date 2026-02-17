@@ -9,9 +9,11 @@
       rm -f "$tmpfile"
     fi
 
-    mkdir -p "${config.home.homeDirectory}/.dropbox-bin"
-    ${pkgs.wget}/bin/wget -O "${config.home.homeDirectory}/.dropbox-bin/dropbox" "https://www.dropbox.com/download?dl=packages/dropbox.py"
-    chmod +x "${config.home.homeDirectory}/.dropbox-bin/dropbox"
+    if [ ! -d "${config.home.homeDirectory}/.dropbox-bin" ]; then
+      mkdir -p "${config.home.homeDirectory}/.dropbox-bin"
+      ${pkgs.wget}/bin/wget -O "${config.home.homeDirectory}/.dropbox-bin/dropbox" "https://www.dropbox.com/download?dl=packages/dropbox.py"
+      chmod +x "${config.home.homeDirectory}/.dropbox-bin/dropbox"
+    fi
   '';
 
   home.sessionPath = [ "${config.home.homeDirectory}/.dropbox-bin" ];
