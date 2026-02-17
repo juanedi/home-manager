@@ -2,6 +2,7 @@
 
 {
   home.activation.dropbox = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    printf '\033[33m[warning] Dropbox installation is impure. To reinstall/remove, trash ~/.dropbox-dist and ~/.dropbox-bin\033[0m\n'
     if [ ! -d "${config.home.homeDirectory}/.dropbox-dist" ]; then
       tmpfile=$(mktemp /tmp/dropbox.XXXXXX.tar.gz)
       ${pkgs.wget}/bin/wget -O "$tmpfile" "https://www.dropbox.com/download?plat=lnx.x86_64"
