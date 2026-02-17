@@ -35,6 +35,7 @@
       ".direnv"
       ".python-version"
       ".dir-locals.el"
+      ".claude/settings.local.json"
     ];
   };
 }
