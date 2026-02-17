@@ -6,6 +6,18 @@
 
     lfs.enable = true;
 
+    aliases = {
+      co = "checkout";
+      st = "status";
+      ci = "commit";
+      br = "branch";
+      f = "fetch";
+      cp = "cherry-pick";
+      diffs = "diff --staged";
+      logr = "log --reverse";
+      l1 = "log -1 -p";
+    };
+
     settings = {
       user = {
         name = "Juan Edi";
@@ -13,18 +25,6 @@
       };
 
       github.user = "juanedi";
-
-      aliases = {
-        co = "checkout";
-        st = "status";
-        ci = "commit";
-        br = "branch";
-        f = "fetch";
-        cp = "cherry-pick";
-        diffs = "diff --staged";
-        logr = "log --reverse";
-        l1 = "log -1 -p";
-      };
     };
 
     ignores = [
