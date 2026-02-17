@@ -40,6 +40,7 @@
     pkgs.cachix
     pkgs.cloc
     pkgs.devenv
+    pkgs.dig
     pkgs.imagemagick
     pkgs.nixfmt
     pkgs.pandoc
