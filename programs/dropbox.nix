@@ -21,7 +21,8 @@
   systemd.user.services.dropbox = {
     Unit = {
       Description = "Dropbox";
-      After = [ "network.target" ];
+      After = [ "graphical-session.target" ];
+      Requires = [ "graphical-session.target" ];
     };
     Service = {
       ExecStart = "${config.home.homeDirectory}/.dropbox-dist/dropboxd";
@@ -29,7 +30,7 @@
       RestartSec = 5;
     };
     Install = {
-      WantedBy = [ "default.target" ];
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 }
