@@ -12,6 +12,7 @@
       eps   = "ps aux | grep -i";
       gst   = "git status";
       doom  = "~/.emacs.d/bin/doom";
+      copy  = "wl-copy -n";
     };
 
     oh-my-zsh = {
