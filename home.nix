@@ -43,9 +43,6 @@
     pkgs.dig
     pkgs.imagemagick
     pkgs.nixfmt
-    pkgs.pandoc
-    pkgs.tectonic
-    pkgs.texlive.combined.scheme-full
     pkgs.tree
     pkgs.watch
     pkgs.watchexec
