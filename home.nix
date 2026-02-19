@@ -43,6 +43,7 @@
     pkgs.dig
     pkgs.imagemagick
     pkgs.nixfmt
+    pkgs.opencode
     pkgs.tree
     pkgs.watch
     pkgs.watchexec
