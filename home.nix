@@ -59,6 +59,10 @@
     ".config/hypr/looknfeel.conf".source = dotfiles/hypr/looknfeel.conf;
     ".config/hypr/autostart.conf".source = dotfiles/hypr/autostart.conf;
 
+    ".local/share/applications/Claude.desktop".source = app-launchers/Claude.desktop;
+    ".local/share/applications/Chess.com.desktop".source = app-launchers/Chess.com.desktop;
+    ".local/share/applications/Telegram.desktop".source = app-launchers/Telegram.desktop;
+
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

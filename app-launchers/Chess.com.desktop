@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Chess.com
+Comment=Chess.com
+Exec=omarchy-launch-webapp https://chess.com/play/online
+Terminal=false
+Type=Application
+Icon=/home/jedi/.local/share/applications/icons/Chess.com.png
+StartupNotify=true
