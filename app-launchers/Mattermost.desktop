@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Mattermost
+Comment=Mattermost
+Exec=omarchy-launch-webapp https://mm.jedi.dev
+Terminal=false
+Type=Application
+Icon=/home/jedi/.local/share/applications/icons/Mattermost.png
+StartupNotify=true
