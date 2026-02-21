@@ -53,11 +53,11 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/hypr/monitors.conf".source = programs/hypr/monitors.conf;
-    ".config/hypr/input.conf".source = programs/hypr/input.conf;
-    ".config/hypr/bindings.conf".source = programs/hypr/bindings.conf;
-    ".config/hypr/looknfeel.conf".source = programs/hypr/looknfeel.conf;
-    ".config/hypr/autostart.conf".source = programs/hypr/autostart.conf;
+    ".config/hypr/monitors.conf".source = dotfiles/hypr/monitors.conf;
+    ".config/hypr/input.conf".source = dotfiles/hypr/input.conf;
+    ".config/hypr/bindings.conf".source = dotfiles/hypr/bindings.conf;
+    ".config/hypr/looknfeel.conf".source = dotfiles/hypr/looknfeel.conf;
+    ".config/hypr/autostart.conf".source = dotfiles/hypr/autostart.conf;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
