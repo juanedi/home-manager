@@ -55,7 +55,7 @@
   # plain files is through 'home.file'.
   home.file = {
     ".local/share/applications" = {
-      source = ./app-launchers;
+      source = ./dotfiles/app-launchers;
       recursive = true;
     };
 
