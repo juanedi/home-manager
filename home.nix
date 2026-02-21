@@ -54,15 +54,17 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config" = {
-      source = ./dotfiles;
-      recursive = true;
-    };
-
     ".local/share/applications" = {
       source = ./app-launchers;
       recursive = true;
     };
+
+    ".config/hypr" = {
+      source = ./dotfiles/hypr;
+      recursive = true;
+    };
+
+    ".claude/CLAUDE.md".source = ./dotfiles/CLAUDE.md;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
