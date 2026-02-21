@@ -41,6 +41,7 @@
     pkgs.cloc
     pkgs.devenv
     pkgs.dig
+    pkgs.gh
     pkgs.imagemagick
     pkgs.nixfmt
     pkgs.opencode
