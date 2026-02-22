@@ -28,15 +28,31 @@
     pkgs.cachix
     pkgs.cloc
     pkgs.devenv
+    pkgs.drawio
     pkgs.dig
+    pkgs.elmPackages.elm
+    pkgs.elmPackages.elm-format
+    pkgs.elmPackages.elm-language-server
+    pkgs.elmPackages.elm-review
+    pkgs.fd
+    pkgs.fswatch
     pkgs.gh
+    pkgs.gnupg
+    pkgs.gnuplot
+    pkgs.graphviz
     pkgs.imagemagick
+    pkgs.jq
     pkgs.nixfmt
+    pkgs.nodejs
     pkgs.opencode
+    pkgs.retry
+    pkgs.ripgrep
+    pkgs.shellcheck
     pkgs.tree
     pkgs.watch
     pkgs.watchexec
     pkgs.wget
+    pkgs.yarn
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
