@@ -6,6 +6,7 @@
     ./programs/dropbox.nix
   ];
 
+  home.username = "jedi";
   home.homeDirectory = "/home/jedi";
   home.stateVersion = "25.11";
 
