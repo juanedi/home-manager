@@ -6,7 +6,6 @@
 
     shellAliases = {
       hm    = "home-manager";
-      hms   = "home-manager switch --flake ~/.config/home-manager#jedi";
       hgrep = "history | grep -i";
       trim  = "sed \"s/^ *//g;s/ *$//g\"";
       eps   = "ps aux | grep -i";

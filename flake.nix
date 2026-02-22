@@ -13,19 +13,18 @@
   outputs =
     { nixpkgs, home-manager, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      linuxPkgs = nixpkgs.legacyPackages.x86_64-linux;
+      darwinPkgs = nixpkgs.legacyPackages.aarch64-darwin;
     in
     {
-      homeConfigurations."jedi" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      homeConfigurations."jedi@linux" = home-manager.lib.homeManagerConfiguration {
+        pkgs = linuxPkgs;
+        modules = [ ./linux.nix ];
+      };
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+      homeConfigurations."jedi@darwin" = home-manager.lib.homeManagerConfiguration {
+        pkgs = darwinPkgs;
+        modules = [ ./darwin.nix ];
       };
     };
 }
