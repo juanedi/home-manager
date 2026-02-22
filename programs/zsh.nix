@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.zsh = {
@@ -11,7 +11,9 @@
       eps   = "ps aux | grep -i";
       gst   = "git status";
       doom  = "~/.emacs.d/bin/doom";
-      copy  = "wl-copy -n";
+    } // lib.optionalAttrs pkgs.stdenv.isLinux {
+      pbcopy  = "wl-copy -n";
+      pbpaste = "wl-paste";
     };
 
     oh-my-zsh = {
