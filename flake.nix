@@ -13,8 +13,14 @@
   outputs =
     { nixpkgs, home-manager, ... }:
     let
-      linuxPkgs = nixpkgs.legacyPackages.x86_64-linux;
-      darwinPkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      linuxPkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
+      darwinPkgs = import nixpkgs {
+        system = "aarch64-darwin";
+        config.allowUnfree = true;
+      };
     in
     {
       homeConfigurations."jedi@linux" = home-manager.lib.homeManagerConfiguration {

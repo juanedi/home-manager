@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -9,6 +9,10 @@
   home.username = "jedi";
   home.homeDirectory = "/home/jedi";
   home.stateVersion = "25.11";
+
+  home.packages = with pkgs; [
+    google-chrome
+  ];
 
   home.file = {
     ".local/share/applications" = {
