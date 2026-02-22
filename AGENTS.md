@@ -47,5 +47,4 @@ home-manager build --flake ~/.config/home-manager#jedi@linux
 
 ## Current State
 
-- `programs.direnv` with `nix-direnv` is enabled, but shell integrations (`enableZshIntegration`, etc.) are commented out pending shell management via HM.
 - `home.stateVersion = "25.11"` — do not change this value.
