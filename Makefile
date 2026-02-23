@@ -1,16 +1,17 @@
-.PHONY: update switch-linux switch-darwin build-linux build-darwin
+UNAME := $(shell uname -s)
+ifeq ($(UNAME),Darwin)
+  PROFILE := jedi@darwin
+else
+  PROFILE := jedi@linux
+endif
+
+.PHONY: update switch build
 
 update:
 	nix flake update
 
-switch-linux:
-	home-manager switch --flake ~/.config/home-manager#jedi@linux
+switch:
+	home-manager switch --flake ~/.config/home-manager#$(PROFILE)
 
-switch-darwin:
-	home-manager switch --flake ~/.config/home-manager#jedi@darwin
-
-build-linux:
-	home-manager build --flake ~/.config/home-manager#jedi@linux
-
-build-darwin:
-	home-manager build --flake ~/.config/home-manager#jedi@darwin
+build:
+	home-manager build --flake ~/.config/home-manager#$(PROFILE)
