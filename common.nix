@@ -4,23 +4,12 @@
   imports = [
     ./programs/autojump.nix
     ./programs/direnv.nix
+    ./programs/drawio.nix
     ./programs/git.nix
     ./programs/starship.nix
-    ./programs/dropbox.nix
     ./programs/zsh.nix
   ];
 
-  home.username = "jedi";
-  home.homeDirectory = "/home/jedi";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "25.11"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -41,41 +30,35 @@
     pkgs.cloc
     pkgs.devenv
     pkgs.dig
+    pkgs.elmPackages.elm
+    pkgs.elmPackages.elm-format
+    pkgs.elmPackages.elm-language-server
+    pkgs.elmPackages.elm-review
+    pkgs.fd
+    pkgs.fswatch
     pkgs.gh
+    pkgs.gnupg
+    pkgs.gnuplot
+    pkgs.graphviz
     pkgs.imagemagick
+    pkgs.jq
     pkgs.nixfmt
+    pkgs.nodejs
     pkgs.opencode
+    pkgs.retry
+    pkgs.ripgrep
+    pkgs.shellcheck
     pkgs.tree
     pkgs.watch
     pkgs.watchexec
     pkgs.wget
+    pkgs.yarn
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".local/share/applications" = {
-      source = ./dotfiles/app-launchers;
-      recursive = true;
-    };
-
-    ".config/hypr" = {
-      source = ./dotfiles/hypr;
-      recursive = true;
-    };
-
     ".claude/CLAUDE.md".source = ./dotfiles/CLAUDE.md;
-
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   home.sessionVariables = {

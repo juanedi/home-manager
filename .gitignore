@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+
+# result of building the nix derivation
+result
