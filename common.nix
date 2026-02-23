@@ -47,6 +47,7 @@
     pkgs.opencode
     pkgs.retry
     pkgs.ripgrep
+    pkgs.screen
     pkgs.shellcheck
     pkgs.tree
     pkgs.watch
