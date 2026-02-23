@@ -28,7 +28,6 @@
     pkgs.cachix
     pkgs.cloc
     pkgs.devenv
-    pkgs.drawio
     pkgs.dig
     pkgs.elmPackages.elm
     pkgs.elmPackages.elm-format
