@@ -17,7 +17,10 @@
       pbpaste = "wl-paste";
     } // lib.optionalAttrs pkgs.stdenv.isDarwin {
       lstcp = "lsof -i -n -P | grep TCP | grep LISTEN";
+
+      # TODO: clean this up! better rely on project env variables to determine credentials
       claude-personal = "CLAUDE_CONFIG_DIR=~/.claude-personal ~/npm-installs/node_modules/@anthropic-ai/claude-code/cli.js";
+      claude-nri = "CLAUDE_CONFIG_DIR=~/.claude-nri ~/npm-installs/node_modules/@anthropic-ai/claude-code/cli.js";
     };
 
     oh-my-zsh = {
