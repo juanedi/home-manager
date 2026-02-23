@@ -5,7 +5,7 @@ else
   PROFILE := jedi@linux
 endif
 
-.PHONY: update switch build
+.PHONY: update switch build clean
 
 update:
 	nix flake update
@@ -15,3 +15,6 @@ switch:
 
 build:
 	home-manager build --flake ~/.config/home-manager#$(PROFILE)
+
+clean:
+	rm -f result
