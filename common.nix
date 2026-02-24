@@ -43,8 +43,10 @@
     pkgs.imagemagick
     pkgs.jq
     pkgs.nixfmt
+    pkgs.neovim
     pkgs.nodejs
     pkgs.opencode
+    pkgs.python3
     pkgs.retry
     pkgs.ripgrep
     pkgs.screen
