@@ -5,6 +5,7 @@
     ./programs/autojump.nix
     ./programs/direnv.nix
     ./programs/drawio.nix
+    ./programs/epdfinfo.nix
     ./programs/git.nix
     ./programs/starship.nix
     ./programs/zsh.nix
