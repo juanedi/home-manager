@@ -8,6 +8,7 @@
     ./programs/git.nix
     ./programs/starship.nix
     ./programs/zsh.nix
+    ./programs/epdfinfo.nix
   ];
 
 
