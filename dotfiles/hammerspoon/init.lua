@@ -69,7 +69,7 @@ hs.hotkey.bind({ "cmd", "shift" }, "A", function()
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "D", function()
-	hs.application.launchOrFocus("TickTick")
+	hs.application.launchOrFocus("Todoist")
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "E", function()
