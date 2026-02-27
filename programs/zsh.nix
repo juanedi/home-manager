@@ -10,13 +10,14 @@
       trim  = "sed \"s/^ *//g;s/ *$//g\"";
       eps   = "ps aux | grep -i";
       gst   = "git status";
-      doom  = "~/.emacs.d/bin/doom";
       sshk = "kitty +kitten ssh";
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
       pbcopy  = "wl-copy -n";
       pbpaste = "wl-paste";
+      doom  = "~/.emacs.d/bin/doom";
     } // lib.optionalAttrs pkgs.stdenv.isDarwin {
       lstcp = "lsof -i -n -P | grep TCP | grep LISTEN";
+      doom = "~/.config/emacs/bin/doom";
 
       # TODO: clean this up! better rely on project env variables to determine credentials
       claude-personal = "CLAUDE_CONFIG_DIR=~/.claude-personal ~/npm-installs/node_modules/@anthropic-ai/claude-code/cli.js";
