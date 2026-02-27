@@ -12,6 +12,7 @@
 
   home.packages = with pkgs; [
     google-chrome
+    ticktick
   ];
 
   home.file = {
