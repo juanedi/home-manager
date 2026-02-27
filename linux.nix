@@ -4,6 +4,7 @@
   imports = [
     ./common.nix
     ./programs/dropbox.nix
+    ./programs/todoist.nix
   ];
 
   home.username = "jedi";

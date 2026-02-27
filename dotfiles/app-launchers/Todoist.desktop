@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Todoist
+Comment=Todoist
+Exec=uwsm-app -- Applications/Todoist.AppImage
+Terminal=false
+Type=Application
+Icon=/home/jedi/.local/share/applications/icons/Todoist.png
+StartupNotify=true
+MimeType=x-scheme-handler/todoist;x-scheme-handler/com.todoist;
