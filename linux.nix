@@ -14,6 +14,7 @@
   home.packages = with pkgs; [
     google-chrome
     ticktick
+    (pkgs.writeShellScriptBin "hyprland-workspace-layout-cycle" (builtins.readFile ./scripts/hyprland-workspace-layout-cycle.sh))
   ];
 
   home.file = {
