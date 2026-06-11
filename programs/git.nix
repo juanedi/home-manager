@@ -31,7 +31,6 @@
       "**.swp"
       "**.ignore"
       "**.ignore.*"
-      ".envrc"
       ".direnv"
       ".python-version"
       ".dir-locals.el"
