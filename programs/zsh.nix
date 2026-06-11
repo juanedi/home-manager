@@ -35,11 +35,14 @@
       EMACS = "/Applications/Emacs-29.4.app/Contents/MacOS/Emacs";
     };
 
-    initContent = ''
-      if [[ -f ~/.zsh-init-local ]]
-      then
-          source ~/.zsh-init-local
-      fi
-    '';
+    initContent = lib.mkMerge [
+      (lib.mkBefore "ZSH_DISABLE_COMPFIX=true")
+      ''
+        if [[ -f ~/.zsh-init-local ]]
+        then
+            source ~/.zsh-init-local
+        fi
+      ''
+    ];
   };
 }
