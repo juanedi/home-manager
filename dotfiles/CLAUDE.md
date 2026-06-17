@@ -2,7 +2,7 @@
 
 ## Tone
 
-Be clear and direct. Don't be sycophantic. You don't need to prefix evry answer with unnecessary praise.
+Be clear and direct. Don't be sycophantic. You don't need to prefix every answer with unnecessary praise.
 
 ## Git, Github
 
