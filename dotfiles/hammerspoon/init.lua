@@ -73,7 +73,7 @@ hs.hotkey.bind({ "cmd", "shift" }, "D", function()
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "E", function()
-    hs.application.launchOrFocus("/Applications/Emacs-29.4.app")
+    hs.application.launchOrFocus("/Applications/Emacs.app")
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "G", function()

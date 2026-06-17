@@ -33,7 +33,7 @@
       DOOMDIR = "$HOME/.config/doom";
       LANG = "en_US.UTF-8";
     } // lib.optionalAttrs pkgs.stdenv.isDarwin {
-      EMACS = "/Applications/Emacs-29.4.app/Contents/MacOS/Emacs";
+      EMACS = "/Applications/Emacs.app/Contents/MacOS/Emacs";
     };
 
     initContent = lib.mkMerge [
