@@ -43,6 +43,7 @@
     pkgs.graphviz
     pkgs.imagemagick
     pkgs.jq
+    pkgs.mermaid-cli
     pkgs.nixfmt
     pkgs.neovim
     pkgs.nodejs
