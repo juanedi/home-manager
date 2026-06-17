@@ -63,6 +63,7 @@
   # plain files is through 'home.file'.
   home.file = {
     ".claude/CLAUDE.md".source = ./dotfiles/CLAUDE.md;
+    ".config/kitty/kitty.conf".source = ./dotfiles/kitty.conf;
   };
 
   home.sessionVariables = {
