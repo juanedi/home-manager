@@ -64,7 +64,9 @@
   # plain files is through 'home.file'.
   home.file = {
     ".claude/CLAUDE.md".source = ./dotfiles/AGENTS.md;
+    ".claude-personal/CLAUDE.md".source = ./dotfiles/AGENTS.md;
     ".codex/AGENTS.md".source = ./dotfiles/AGENTS.md;
+    ".codex-personal/AGENTS.md".source = ./dotfiles/AGENTS.md;
     ".config/kitty/kitty.conf".source = ./dotfiles/kitty.conf;
   };
 

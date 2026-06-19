@@ -12,6 +12,8 @@
       eps   = "ps aux | grep -i";
       gst   = "git status";
       sshk = "kitty +kitten ssh";
+      claudep = "CLAUDE_CONFIG_DIR=~/.claude-personal claude";
+      codexp = "CODEX_HOME=~/.codex-personal codex";
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
       pbcopy  = "wl-copy -n";
       pbpaste = "wl-paste";
