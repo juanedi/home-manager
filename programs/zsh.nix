@@ -6,7 +6,7 @@
 
     shellAliases = {
       hm    = "home-manager";
-      hms   = "(cd $HOME/.config/home-manager/ && make switch)";
+      hms   = "make -C $HOME/.config/home-manager/ switch";
       hgrep = "history | grep -i";
       trim  = "sed \"s/^ *//g;s/ *$//g\"";
       eps   = "ps aux | grep -i";
