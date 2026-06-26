@@ -1,6 +1,7 @@
 cursor-style = underline
+shell-integration-features = no-cursor
 command = /Users/jedi/.nix-profile/bin/zsh
-background-opacity = 0.90
+background-opacity = 0.95
 background-blur = 32
 macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
