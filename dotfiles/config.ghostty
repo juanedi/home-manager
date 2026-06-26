@@ -1,9 +1,9 @@
-cursor-style = underline
-shell-integration-features = no-cursor
-command = /Users/jedi/.nix-profile/bin/zsh
-background-opacity = 0.95
 background-blur = 32
-macos-option-as-alt = true
-macos-titlebar-proxy-icon = hidden
+background-opacity = 0.95
+command = /Users/jedi/.nix-profile/bin/zsh
+cursor-style = underline
 keybind = alt+left=esc:b
 keybind = alt+right=esc:f
+macos-option-as-alt = true
+macos-titlebar-proxy-icon = hidden
+shell-integration-features = no-cursor
