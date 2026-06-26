@@ -1,5 +1,15 @@
 { config, pkgs, ... }:
 
+let
+  vars = {
+    HOME = config.home.homeDirectory;
+  };
+  inject = names: path:
+    builtins.replaceStrings
+      (map (n: "@${n}@") names)
+      (map (n: vars.${n}) names)
+      (builtins.readFile path);
+in
 {
   imports = [
     ./programs/autojump.nix
@@ -67,8 +77,8 @@
     ".claude-personal/CLAUDE.md".source = ./dotfiles/AGENTS.md;
     ".codex/AGENTS.md".source = ./dotfiles/AGENTS.md;
     ".codex-personal/AGENTS.md".source = ./dotfiles/AGENTS.md;
-    ".config/kitty/kitty.conf".source = ./dotfiles/kitty.conf;
-    ".config/ghostty/config.ghostty".source = ./dotfiles/config.ghostty;
+    ".config/kitty/kitty.conf".text = inject [ "HOME" ] ./dotfiles/kitty.conf;
+    ".config/ghostty/config.ghostty".text = inject [ "HOME" ] ./dotfiles/config.ghostty;
     ".hushlogin".text = "";
   };
 
