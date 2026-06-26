@@ -68,7 +68,7 @@ hs.hotkey.bind({ "cmd", "shift" }, "A", function()
 	hs.application.launchOrFocus("Slack")
 end)
 
-hs.hotkey.bind({ "cmd", "shift" }, "D", function()
+hs.hotkey.bind({ "cmd", "shift" }, "U", function()
 	hs.application.launchOrFocus("Todoist")
 end)
 
@@ -97,7 +97,7 @@ hs.hotkey.bind({ "cmd", "shift" }, "W", function()
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "X", function()
-	hs.application.launchOrFocus("kitty")
+	hs.application.launchOrFocus("Ghostty")
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "F", function()
