@@ -68,6 +68,7 @@
     ".codex/AGENTS.md".source = ./dotfiles/AGENTS.md;
     ".codex-personal/AGENTS.md".source = ./dotfiles/AGENTS.md;
     ".config/kitty/kitty.conf".source = ./dotfiles/kitty.conf;
+    ".config/ghostty/config.ghostty".source = ./dotfiles/config.ghostty;
   };
 
   home.sessionVariables = {
