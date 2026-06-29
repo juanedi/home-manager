@@ -5,7 +5,7 @@ cursor-style = underline
 focus-follows-mouse = true
 keybind = alt+left=esc:b
 keybind = alt+right=esc:f
-macos-option-as-alt = true
+macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
 shell-integration-features = no-cursor
 window-padding-y = 4,2
