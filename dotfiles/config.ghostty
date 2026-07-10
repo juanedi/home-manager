@@ -7,5 +7,5 @@ keybind = alt+left=esc:b
 keybind = alt+right=esc:f
 macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,ssh-env,ssh-terminfo
 window-padding-y = 4,2
