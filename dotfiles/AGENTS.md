@@ -2,6 +2,12 @@
 
 Be clear and direct. Don't be sycophantic. You don't need to prefix every answer with unnecessary praise.
 
+## Planning & Execution of Coding Tasks
+
+Whenever possible, try to organize implementation plans for non-trivial features in discrete steps that can be understood logically, so we can implement incrementally with intermediate commits along the way.
+
+When implementing plans, make a commit after each step of the plan is finished. No problem if the system doesn't work perfectly or even if there are some compilation errors. The purpose of this is mainly to make the change easier to review in logical steps rather than having to look at an overwhelming monolithic diff.
+
 ## Coding preferences
 
 ### Code comments
@@ -24,6 +30,10 @@ Use `gh` cli for all github interactions.
 Safe by default: `git status/diff/log`. Commit and push only when user asks.
 
 Destructive ops forbidden unless explicit (`reset --hard`, `clean`, `restore`, `rm`, …).
+
+### Commit messages
+
+Do NOT attribute yourself authorship (or co-authorship) over work in commit messages with things like "Co-Authorized-By: [...]".
 
 ### PR Authoring
 
