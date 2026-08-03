@@ -14,6 +14,7 @@
       sshk = "kitty +kitten ssh";
       claudep = "CLAUDE_CONFIG_DIR=~/.claude-personal claude";
       codexp = "CODEX_HOME=~/.codex-personal codex";
+      dc = "docker-compose";
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
       pbcopy  = "wl-copy -n";
       pbpaste = "wl-paste";
