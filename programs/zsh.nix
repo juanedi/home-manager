@@ -11,7 +11,6 @@
       trim  = "sed \"s/^ *//g;s/ *$//g\"";
       eps   = "ps aux | grep -i";
       gst   = "git status";
-      sshk = "kitty +kitten ssh";
       claudep = "CLAUDE_CONFIG_DIR=~/.claude-personal claude";
       codexp = "CODEX_HOME=~/.codex-personal codex";
       dc = "docker-compose";

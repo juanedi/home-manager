@@ -77,7 +77,6 @@ in
     ".claude-personal/CLAUDE.md".source = ./dotfiles/AGENTS.md;
     ".codex/AGENTS.md".source = ./dotfiles/AGENTS.md;
     ".codex-personal/AGENTS.md".source = ./dotfiles/AGENTS.md;
-    ".config/kitty/kitty.conf".text = inject [ "HOME" ] ./dotfiles/kitty.conf;
     ".config/ghostty/config.ghostty".text = inject [ "HOME" ] ./dotfiles/config.ghostty;
     ".hushlogin".text = "";
   };
