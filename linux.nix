@@ -3,7 +3,7 @@
 {
   imports = [
     ./common.nix
-    ./programs/dropbox.nix
+    # ./programs/dropbox.nix
     ./programs/mattermost.nix
     ./programs/todoist.nix
     ./programs/uhk-agent.nix
