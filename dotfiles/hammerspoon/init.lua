@@ -73,7 +73,7 @@ hs.hotkey.bind({ "cmd", "shift" }, "U", function()
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "E", function()
-    hs.application.launchOrFocus("/Applications/Emacs.app")
+    hs.application.launchOrFocus("/Users/jedi/Applications/Home Manager Apps/Emacs.app")
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "G", function()

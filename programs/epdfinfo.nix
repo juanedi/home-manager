@@ -2,8 +2,8 @@
 
 {
   # Installs the epdfinfo binary (from emacsPackages.pdf-tools) into the path so
-  # that it will be picked up by my non-home-manager installation of emacs,
-  # enabling pdf-view-mode.
+  # that Doom's straight-installed pdf-tools picks it up, enabling
+  # pdf-view-mode.
   #
   # Without this, emacs will try to compile the binary from source, which
   # requires installing non-trivial development dependencies.

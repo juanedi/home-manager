@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./common.nix ];
+  imports = [
+    ./common.nix
+    ./programs/emacs.nix
+  ];
 
   home.username = "jedi";
   home.homeDirectory = "/Users/jedi";
