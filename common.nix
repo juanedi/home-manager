@@ -37,6 +37,17 @@ in
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    (pkgs.writeShellApplication {
+      name = "supernote-upgrade-tailscale";
+      runtimeInputs = [
+        pkgs.android-tools
+        pkgs.coreutils
+        pkgs.curl
+        pkgs.jq
+      ];
+      text = builtins.readFile ./scripts/supernote-upgrade-tailscale.sh;
+    })
+    pkgs.android-tools
     pkgs.cachix
     pkgs.cloc
     pkgs.devenv
