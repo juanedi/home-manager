@@ -80,16 +80,8 @@ hs.hotkey.bind({ "cmd", "shift" }, "G", function()
 	hs.application.launchOrFocus("Telegram")
 end)
 
-hs.hotkey.bind({ "cmd", "shift" }, "J", function()
-	hs.application.launchOrFocus("Dash")
-end)
-
 hs.hotkey.bind({ "cmd", "shift" }, "L", function()
 	hs.application.launchOrFocus("Linear")
-end)
-
-hs.hotkey.bind({ "cmd", "shift" }, "K", function()
-	hs.application.launchOrFocus("Mattermost")
 end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "W", function()
@@ -102,10 +94,6 @@ end)
 
 hs.hotkey.bind({ "cmd", "shift" }, "F", function()
 	hs.application.launchOrFocus("Notion Calendar")
-end)
-
-hs.hotkey.bind({ "cmd", "shift" }, "M", function()
-	hs.application.launchOrFocus("Zed")
 end)
 
 --------------------------------------------
